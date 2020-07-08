@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GU-mR-Eeb">
+                                <rect key="frame" x="137.66666666666666" y="628" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.93333333330000001" blue="0.93333333330000001" alpha="0.21114120015337423" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="G1A-yp-zNT"/>
+                                    <constraint firstAttribute="width" constant="100" id="Jxx-kQ-N6i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="63"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="?"/>
+                                <connections>
+                                    <action selector="btnAsk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jjx-Sn-uN2"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="JGO-Og-U7W">
+                                <rect key="frame" x="15" y="215.33333333333334" width="345" height="402.66666666666663"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Me Pergunte Algo..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.65000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="URU-m4-s3O">
+                                <rect key="frame" x="0.0" y="84.000000000000014" width="375" height="131.33333333333337"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.93333333330000001" blue="0.93333333330000001" alpha="0.21114120019999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1003472731" green="0.65899109840000003" blue="0.74261265990000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="URU-m4-s3O" secondAttribute="trailing" id="0Z3-9R-ISP"/>
+                            <constraint firstItem="URU-m4-s3O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BK1-7N-tcL"/>
+                            <constraint firstItem="3GU-mR-Eeb" firstAttribute="top" secondItem="JGO-Og-U7W" secondAttribute="bottom" constant="10" id="DVq-PK-Bqg"/>
+                            <constraint firstItem="3GU-mR-Eeb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IqI-gW-xK2"/>
+                            <constraint firstItem="JGO-Og-U7W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KZX-v7-77b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="URU-m4-s3O" secondAttribute="trailing" id="Km5-ce-Ewa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JGO-Og-U7W" secondAttribute="trailing" constant="15" id="KyG-fe-jUz"/>
+                            <constraint firstItem="JGO-Og-U7W" firstAttribute="top" secondItem="URU-m4-s3O" secondAttribute="bottom" id="NjC-JE-WXO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3GU-mR-Eeb" secondAttribute="bottom" constant="50" id="Tgg-TA-GcV"/>
+                            <constraint firstItem="URU-m4-s3O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="chJ-L1-UFi"/>
+                            <constraint firstItem="URU-m4-s3O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jAI-24-Rkw"/>
+                            <constraint firstItem="JGO-Og-U7W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="uIU-T0-PGm"/>
+                            <constraint firstItem="URU-m4-s3O" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v8b-dv-GoK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnAsk" destination="3GU-mR-Eeb" id="Bsp-Yt-B8s"/>
+                        <outlet property="imgBall" destination="JGO-Og-U7W" id="Fap-Y6-2ku"/>
+                        <outlet property="lblTitle" destination="URU-m4-s3O" id="t3p-3y-HJW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="135.9375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ball1" width="305" height="273.66665649414062"/>
+    </resources>
 </document>
